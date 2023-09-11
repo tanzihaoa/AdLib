@@ -34,7 +34,6 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.aar'])
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -42,4 +41,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    compileOnly files('libs/Baidu_MobAds_SDK-release_v9.31.aar')
+    compileOnly files('libs/beizi_ad_sdk_3.4.20.34.aar')
+    compileOnly files('libs/beizi_fusion_sdk_4.90.2.52.aar')
+    compileOnly files('libs/GDTSDK.unionNormal.4.531.1401.aar')
+    compileOnly files('libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar')
+    compileOnly files('libs/open_ad_sdk_5.3.5.1.aar')
 }
