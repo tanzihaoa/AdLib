@@ -1,15 +1,69 @@
 package com.tzh.ad.util
 
 import android.app.Activity
+import android.content.Context
 import android.widget.FrameLayout
 import com.beizi.fusion.AdListener
 import com.beizi.fusion.BannerAd
 import com.beizi.fusion.BannerAdListener
+import com.beizi.fusion.BeiZiCustomController
+import com.beizi.fusion.BeiZis
 import com.beizi.fusion.RewardedVideoAd
 import com.beizi.fusion.RewardedVideoAdListener
 import com.beizi.fusion.SplashAd
 
 object AdUtil {
+
+    fun init(context: Context,appId : String){
+        //广告初始化
+        BeiZis.init(context,appId,object : BeiZiCustomController() {
+            /**
+             * 是否允许SDK主动使用地理位置信息
+             *
+             * @return true可以获取，false禁止获取。默认为true
+             */
+            override fun isCanUseLocation(): Boolean {
+                return true
+            }
+
+            /**
+             * 是否允许SDK主动使用ACCESS_WIFI_STATE权限
+             *
+             * @return true可以使用，false禁止使用。默认为true
+             */
+            override fun isCanUseWifiState(): Boolean {
+                return true
+            }
+
+            /**
+             * 是否允许SDK主动使用手机硬件参数，如：imei，imsi
+             *
+             * @return true可以使用，false禁止使用。默认为true
+             */
+            override fun isCanUsePhoneState(): Boolean {
+                return true
+            }
+
+            /**
+             * 是否能使用Oaid
+             *
+             * @return true可以使用，false禁止使用。默认为true
+             */
+            override fun isCanUseOaid(): Boolean {
+                return true
+            }
+
+            /**
+             * 是否能使用Gaid
+             *
+             * @return true可以使用，false禁止使用。默认为true
+             */
+            override fun isCanUseGaid(): Boolean {
+                return true
+            }
+        })
+    }
+
     /**
      * 显示开屏广告
      */
