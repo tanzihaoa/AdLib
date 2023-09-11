@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tool="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="v"
+            type="com.tzh.addemo.MainActivity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/color_fff">
+            <com.tzh.mylibrary.view.XAppTitleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.tzh.mylibrary.shapeview.ShapeTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:text="开屏广告"
+                app:shapeCorners="20dp"
+                app:shapeGradientAngle="BL_TR"
+                android:gravity="center"
+                app:shapeBackgroundColor="@color/color_00f3b8"
+                app:shapeBorderColor="@color/color_333"
+                app:shapeBorderWidth="1dp"
+                android:onClick="@{()->v.toRecycler()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.tzh.mylibrary.shapeview.ShapeConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                app:shapeBackgroundColor="@color/color_00f3b8"
+                app:shapeCorners="8dp">
+                <com.tzh.mylibrary.view.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:itvText="to"
+                    app:itvShowLocal="TO_TEXT_RIGHT"
+                    app:itvImgUnSelectSrc="@drawable/icon_next"
+                    app:itvImgWidth="6dp"
+                    app:itvImgHeight="10dp"
+                    app:itvTextIsBold="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </com.tzh.mylibrary.shapeview.ShapeConstraintLayout>
+
+            <com.tzh.mylibrary.shapeview.ShapeTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:text="toVideo"
+                app:shapeCorners="20dp"
+                android:gravity="center"
+                app:shapeBackgroundColor="@color/color_00f3b8"
+                app:shapeBorderColor="@color/color_333"
+                app:shapeBorderWidth="1dp"
+                android:onClick="@{()->v.toImage()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.tzh.mylibrary.shapeview.ShapeTextView
+                android:id="@+id/tv_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:text="设置动态壁纸"
+                app:shapeCorners="20dp"
+                android:gravity="center"
+                app:shapeBackgroundColor="@color/color_00f3b8"
+                app:shapeBorderColor="@color/color_333"
+                app:shapeBorderWidth="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.tzh.mylibrary.shapeview.ShapeTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:text="保存视频到本地"
+                app:shapeCorners="20dp"
+                android:gravity="center"
+                app:shapeBackgroundColor="@color/color_00f3b8"
+                app:shapeBorderColor="@color/color_333"
+                app:shapeBorderWidth="1dp"
+                android:onClick="@{()->v.saveVideo()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
