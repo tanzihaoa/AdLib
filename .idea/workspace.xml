@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交">
+    <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694427668131</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="代码提交 增加初始化方法">
+      <created>1694428144683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694428144683</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +292,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
+    <MESSAGE value="代码提交 增加初始化方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交 增加初始化方法" />
   </component>
 </project>
