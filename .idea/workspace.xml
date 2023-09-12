@@ -10,7 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
+      <change afterPath="$PROJECT_DIR$/firebaselib/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/consumer-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/src/androidTest/java/com/tzh/firebaselib/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebaselib/src/test/java/com/tzh/firebaselib/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/xml/file_paths_ad.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/xml/gdt_file_path.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +95,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="Version Catalog File.versions" />
       </list>
     </option>
   </component>
@@ -104,19 +127,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/Administrator/StudioProjects/AdLib/baselibrary/src/main/res/xml"
+    "last_opened_file_path": "C:/Users/Administrator/StudioProjects/AdLib/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\firebaselib\libs" />
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\local_repo\Baidu_MobAds_SDK-release_v9.31" />
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\src\main\res\xml" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\libs" />
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.tzh.ad.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Gradle.AdLib:baselibrary [assemble]">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="AdLib.app.main" />
       <option name="DEPLOY" value="true" />
@@ -276,8 +306,25 @@
       <option name="project" value="LOCAL" />
       <updated>1694428144683</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="代码提交 增加初始化方法">
+      <created>1694428874787</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694428874787</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
