@@ -10,28 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
-      <change afterPath="$PROJECT_DIR$/firebaselib/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/src/androidTest/java/com/tzh/firebaselib/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebaselib/src/test/java/com/tzh/firebaselib/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/firebaselib/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/xml/file_paths_ad.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/res/xml/gdt_file_path.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/src/androidTest/java/com/tzh/firebaselib/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebaselib/src/test/java/com/tzh/firebaselib/ExampleUnitTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,20 +71,6 @@
                 <item name="AdLib" type="f1a62948:ProjectNode" />
                 <item name="baselibrary" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AdLib" type="f1a62948:ProjectNode" />
-                <item name="baselibrary" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="android" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AdLib" type="f1a62948:ProjectNode" />
-                <item name="baselibrary" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -121,25 +110,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/Administrator/StudioProjects/AdLib/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/StudioProjects/AdLib/app&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\app" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\firebaselib\libs" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\local_repo\Baidu_MobAds_SDK-release_v9.31" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\src\main\res\xml" />
-      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\libs" />
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\firebaselib" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -313,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694428874787</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="代码提交 增加初始化方法">
+      <created>1694487421316</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694487421316</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

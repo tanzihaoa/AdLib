@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.kezong.fat-aar'
 }
 
 android {
@@ -31,15 +32,26 @@ android {
     dataBinding {
         enabled = true
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
+    compileOnly fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation project(':firebaselib')
+    embed(name:'Baidu_MobAds_SDK-release_v9.31',ext:'aar')
+    embed(name:'beizi_ad_sdk_3.4.20.34',ext:'aar')
+    embed(name:'beizi_fusion_sdk_4.90.2.52',ext:'aar')
+    embed(name:'GDTSDK.unionNormal.4.531.1401',ext:'aar')
+    embed(name:'kssdk-ad-3.3.47-publishRelease-c5859164a8',ext:'aar')
+    embed(name:'open_ad_sdk_5.3.5.1',ext:'aar')
 }
