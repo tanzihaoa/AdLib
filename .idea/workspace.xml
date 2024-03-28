@@ -10,27 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694487421316</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="代码提交 增加初始化方法">
+      <created>1711593927368</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711593927368</updated>
+    </task>
+    <task id="LOCAL-00009" summary="代码提交 增加初始化方法">
+      <created>1711594663573</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711594663573</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

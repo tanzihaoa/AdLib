@@ -1,5 +1,6 @@
 package com.tzh.addemo
 
+import com.bytedance.sdk.openadsdk.CSJAdError
 import com.tzh.ad.util.AdUtil
 import com.tzh.addemo.base.AppBaseActivity
 import com.tzh.addemo.databinding.ActivityMainBinding
@@ -24,6 +25,10 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
             }
 
             override fun onAdTick(millisUnitFinished: Long) {
+
+            }
+
+            override fun onError(csJAdError: CSJAdError?) {
 
             }
         })
