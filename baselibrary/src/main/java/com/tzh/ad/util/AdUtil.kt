@@ -91,11 +91,12 @@ object AdUtil {
 
             override fun onSplashLoadFail(csjAdError : CSJAdError?) {
                 Log.e("=======","广告加载失败===${csjAdError?.msg}====${csjAdError?.code}")
-
+                listener.onError(csjAdError)
             }
 
             override fun onSplashRenderSuccess(csJSplashAd: CSJSplashAd?) {
                 Log.e("=======","广告加载成功")
+                listener.loaded()
                 csJSplashAd?.setSplashAdListener(mCSJSplashInteractionListener)
                 val splashView: View? = csJSplashAd?.splashView
                 view.removeAllViews()
@@ -104,6 +105,7 @@ object AdUtil {
 
             override fun onSplashRenderFail(csJSplashAd: CSJSplashAd?, csJAdError: CSJAdError?) {
                 Log.e("=======","广告加载失败===${csJAdError?.msg}====${csJAdError?.code}")
+                listener.onError(csJAdError)
             }
         }, 3500)
     }
@@ -129,5 +131,7 @@ object AdUtil {
         fun close()
 
         fun onAdTick(millisUnitFinished : Long)
+
+        fun onError(csJAdError: CSJAdError?)
     }
 }
