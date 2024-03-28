@@ -22,7 +22,7 @@ object AdUtil {
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
-            .useMediation(false)//开启聚合功能，默认false
+            .useMediation(true)//开启聚合功能，默认false
             .supportMultiProcess(true)
             .build()
         )
