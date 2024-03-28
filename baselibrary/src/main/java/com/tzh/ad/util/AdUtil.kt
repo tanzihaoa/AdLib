@@ -52,12 +52,10 @@ object AdUtil {
             appKey  // adn没有appKey时，传入空即可)
         ){}
 
-        val width = Util.px2dip(view.context, view.width.toFloat()).toFloat()
-        val height = Util.px2dip(view.context, view.height.toFloat()).toFloat()
         //第二步、创建AdSlot
         val adSlot = AdSlot.Builder()
             .setCodeId(splashId)
-            .setImageAcceptedSize(width.toInt(), height.toInt())
+            .setImageAcceptedSize(view.width, view.height)
             .setMediationAdSlot(
                 MediationAdSlot.Builder() //将自定义兜底对象设置给AdSlot
                     .setMediationSplashRequestInfo(csjSplashRequestInfo)
