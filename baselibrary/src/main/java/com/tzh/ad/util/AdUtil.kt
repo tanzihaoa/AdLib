@@ -2,64 +2,37 @@ package com.tzh.ad.util
 
 import android.app.Activity
 import android.content.Context
+import android.util.Log
+import android.view.View
 import android.widget.FrameLayout
-import com.beizi.fusion.AdListener
-import com.beizi.fusion.BannerAd
-import com.beizi.fusion.BannerAdListener
-import com.beizi.fusion.BeiZiCustomController
-import com.beizi.fusion.BeiZis
-import com.beizi.fusion.RewardedVideoAd
-import com.beizi.fusion.RewardedVideoAdListener
-import com.beizi.fusion.SplashAd
+import com.bytedance.sdk.openadsdk.AdSlot
+import com.bytedance.sdk.openadsdk.CSJAdError
+import com.bytedance.sdk.openadsdk.CSJSplashAd
+import com.bytedance.sdk.openadsdk.TTAdConfig
+import com.bytedance.sdk.openadsdk.TTAdNative.CSJSplashAdListener
+import com.bytedance.sdk.openadsdk.TTAdSdk
+import com.bytedance.sdk.openadsdk.mediation.MediationConstant
+import com.bytedance.sdk.openadsdk.mediation.ad.MediationAdSlot
+import com.bytedance.sdk.openadsdk.mediation.ad.MediationSplashRequestInfo
+
 
 object AdUtil {
 
     fun init(context: Context,appId : String){
         //广告初始化
-        BeiZis.init(context,appId,object : BeiZiCustomController() {
-            /**
-             * 是否允许SDK主动使用地理位置信息
-             *
-             * @return true可以获取，false禁止获取。默认为true
-             */
-            override fun isCanUseLocation(): Boolean {
-                return true
+        TTAdSdk.init(context,TTAdConfig.Builder()
+            .appId(appId)
+            .useMediation(false)//开启聚合功能，默认false
+            .supportMultiProcess(true)
+            .build()
+        )
+        TTAdSdk.start(object : TTAdSdk.Callback{
+            override fun success() {
+                Log.e("=======","广告初始化成功")
             }
 
-            /**
-             * 是否允许SDK主动使用ACCESS_WIFI_STATE权限
-             *
-             * @return true可以使用，false禁止使用。默认为true
-             */
-            override fun isCanUseWifiState(): Boolean {
-                return true
-            }
-
-            /**
-             * 是否允许SDK主动使用手机硬件参数，如：imei，imsi
-             *
-             * @return true可以使用，false禁止使用。默认为true
-             */
-            override fun isCanUsePhoneState(): Boolean {
-                return true
-            }
-
-            /**
-             * 是否能使用Oaid
-             *
-             * @return true可以使用，false禁止使用。默认为true
-             */
-            override fun isCanUseOaid(): Boolean {
-                return true
-            }
-
-            /**
-             * 是否能使用Gaid
-             *
-             * @return true可以使用，false禁止使用。默认为true
-             */
-            override fun isCanUseGaid(): Boolean {
-                return true
+            override fun fail(code: Int, msg: String?) {
+                Log.e("=======","广告初始化成功错误===${code}====${msg}")
             }
         })
     }
@@ -67,145 +40,87 @@ object AdUtil {
     /**
      * 显示开屏广告
      */
-    fun showSpreadAd(splashId : String,view : FrameLayout,listener : MyAdListener,isGone : Boolean = false){
-        var splashAd : SplashAd?= null
+    fun showSpreadAd(splashId : String,appId : String,appKey : String,view : FrameLayout,listener : MyAdListener,isGone : Boolean = false){
         if(isGone){
             listener.close()
             return
         }
-        splashAd = SplashAd(view.context,null,splashId,object : AdListener {
-            override fun onAdLoaded() {
-                //加载成功
-                splashAd?.show(view)
+        val csjSplashRequestInfo : MediationSplashRequestInfo = object : MediationSplashRequestInfo(
+            MediationConstant.ADN_PANGLE, // 穿山甲
+            splashId, // adn开屏广告代码位Id，注意不是聚合广告位Id
+            appId,   // adn应用id，注意要跟初始化传入的保持一致
+            appKey  // adn没有appKey时，传入空即可)
+        ){}
+
+        val width = Util.px2dip(view.context, view.width.toFloat()).toFloat()
+        val height = Util.px2dip(view.context, view.height.toFloat()).toFloat()
+        //第二步、创建AdSlot
+        val adSlot = AdSlot.Builder()
+            .setCodeId(splashId)
+            .setImageAcceptedSize(width.toInt(), height.toInt())
+            .setMediationAdSlot(
+                MediationAdSlot.Builder() //将自定义兜底对象设置给AdSlot
+                    .setMediationSplashRequestInfo(csjSplashRequestInfo)
+                    .build()
+            )
+            .build()
+
+        // 第三步，请求广告
+        val adNativeLoader = TTAdSdk.getAdManager().createAdNative(view.context)
+
+
+        val mCSJSplashInteractionListener = object : CSJSplashAd.SplashAdListener{
+            override fun onSplashAdShow(csJSplashAd: CSJSplashAd?) {
+
             }
 
-            //广告展示
-            override fun onAdShown() {
-                listener.loaded()
+            override fun onSplashAdClick(csJSplashAd: CSJSplashAd?) {
+
             }
 
-            //广告加载错误
-            override fun onAdFailedToLoad(code : Int) {
+            override fun onSplashAdClose(csJSplashAd: CSJSplashAd?, i: Int) {
+                Log.e("=======","广告关闭")
                 listener.close()
             }
+        }
 
-            //广告关闭
-            override fun onAdClosed() {
-                listener.close()
-            }
-
-            //广告倒计时
-            override fun onAdTick(time : Long) {
-                listener.onAdTick(time)
-            }
-
-            //广告点击
-            override fun onAdClicked() {
+        adNativeLoader.loadSplashAd(adSlot, object : CSJSplashAdListener{
+            override fun onSplashLoadSuccess(csjSplashAd: CSJSplashAd?) {
 
             }
-        },5000)
-        splashAd.loadAd(view.width,view.height)//第一个参数是宽度，第二个参数是高度
+
+            override fun onSplashLoadFail(csjAdError : CSJAdError?) {
+                Log.e("=======","广告加载失败===${csjAdError?.msg}====${csjAdError?.code}")
+
+            }
+
+            override fun onSplashRenderSuccess(csJSplashAd: CSJSplashAd?) {
+                Log.e("=======","广告加载成功")
+                csJSplashAd?.setSplashAdListener(mCSJSplashInteractionListener)
+                val splashView: View? = csJSplashAd?.splashView
+                view.removeAllViews()
+                view.addView(splashView)
+            }
+
+            override fun onSplashRenderFail(csJSplashAd: CSJSplashAd?, csJAdError: CSJAdError?) {
+                Log.e("=======","广告加载失败===${csJAdError?.msg}====${csJAdError?.code}")
+            }
+        }, 3500)
     }
 
     /**
      * 显示Banner广告
      */
     fun showBannerAd(splashId : String,view : FrameLayout,isGone : Boolean = false){
-        val splashAd : BannerAd?
-        if(isGone){
-            return
-        }
-        splashAd = BannerAd(view.context,splashId,object : BannerAdListener {
-            override fun onAdFailed(p0: Int) {
 
-            }
-
-            override fun onAdLoaded() {
-
-            }
-
-            override fun onAdShown() {
-
-            }
-
-            override fun onAdClosed() {
-                //移除广告
-                if (view.childCount > 0) {
-                    view.removeAllViews()
-                }
-            }
-
-            override fun onAdClick() {
-
-            }
-
-        },5000)
-        val width = Util.px2dip(view.context, view.width.toFloat()).toFloat()
-        val height = Util.px2dip(view.context, view.height.toFloat()).toFloat()
-        splashAd.loadAd(width,height,view)//第一个参数是宽度，第二个参数是高度
     }
 
     /**
      * 显示激励视频
      */
-        fun showRewardedVideoAd(activity : Activity,splashId : String,listener : MyAdListener,isGone : Boolean = false){
-        var mRewardedVideoAd : RewardedVideoAd ?= null
-        if(isGone){
-            listener.close()
-            return
-        }
-        mRewardedVideoAd = RewardedVideoAd(activity,splashId,object : RewardedVideoAdListener{
-            /**
-             * 获得奖励，在该回调中做奖励操作
-             */
-            override fun onRewarded() {
-                listener.close()
+    fun showRewardedVideoAd(activity : Activity,splashId : String,listener : MyAdListener,isGone : Boolean = false){
 
-            }
-            /**
-             * 加载失败
-             * @param i 错误码
-             */
-            override fun onRewardedVideoAdFailedToLoad(i: Int) {
 
-            }
-
-            /**
-             * 广告加载成功
-             */
-            override fun onRewardedVideoAdLoaded() {
-                //广告加载成功直接显示
-                if (mRewardedVideoAd != null && mRewardedVideoAd?.isLoaded == true) {
-                    mRewardedVideoAd?.showAd(activity)
-                }
-            }
-
-            /**
-             * 广告展示
-             */
-            override fun onRewardedVideoAdShown() {
-
-            }
-
-            /**
-             * 广告关闭
-             */
-            override fun onRewardedVideoAdClosed() {
-
-            }
-
-            /**
-             * 广告点击
-             */
-            override fun onRewardedVideoClick() {
-
-            }
-
-            override fun onRewardedVideoComplete() {
-
-            }
-        },10000,1)
-        mRewardedVideoAd.loadAd()
     }
 
     interface MyAdListener{

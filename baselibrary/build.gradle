@@ -47,11 +47,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
-    embed(name:'Baidu_MobAds_SDK-release_v9.31',ext:'aar')
-    embed(name:'beizi_ad_sdk_3.4.20.34',ext:'aar')
-    embed(name:'beizi_fusion_sdk_4.90.2.52',ext:'aar')
-    embed(name:'GDTSDK.unionNormal.4.531.1401',ext:'aar')
-    embed(name:'kssdk-ad-3.3.47-publishRelease-c5859164a8',ext:'aar')
-    embed(name:'open_ad_sdk_5.3.5.1',ext:'aar')
+    //融合基础包，必须引入
+    implementation "com.pangle.cn:mediation-sdk:5.9.2.8"
 }

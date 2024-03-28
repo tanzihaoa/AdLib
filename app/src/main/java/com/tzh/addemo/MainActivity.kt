@@ -14,11 +14,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     override fun initData() {
-
-    }
-
-    fun toRecycler(){
-        AdUtil.showSpreadAd("103222",binding.frameLayout,object : AdUtil.MyAdListener{
+        AdUtil.showSpreadAd("888827949","5466461","",binding.frameLayout,object : AdUtil.MyAdListener{
             override fun loaded() {
 
             }
@@ -31,6 +27,10 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
 
             }
         })
+    }
+
+    fun toRecycler(){
+
     }
 
     fun toImage(){

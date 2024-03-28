@@ -23,13 +23,6 @@
     <!--应⽤安装权限-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-
-    <!--穿山甲必要权限，解决安全风险漏洞，发送和注册广播事件需要调用带有传递权限的接口-->
-    <permission
-        android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN" />
-
     <!--可选权限-->
     <!--设备信息：MAC获取权限-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -40,16 +33,5 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         >
-        <!-- gdt(广点通渠道广告sdk配置) Ad -->
-
-        <!--如果targetSdkVersion设置值>=24，则必须添加以下provider，否则会影响app变现效率-->
-        <!--请开发者根据自己PackageName来替换${applicationId}这个字段-->
-        <!--特别注意这个authorities中的fileprovider为全部小写-->
-
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="${applicationId}.TTMultiProvider"
-            android:exported="false" />
-        <!--    兼容Android12 给快手广告SDK增加 android:exported="true" 配置-->
     </application>
 </manifest>

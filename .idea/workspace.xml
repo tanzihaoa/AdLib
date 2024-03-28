@@ -10,39 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/consumer-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/Baidu_MobAds_SDK-release_v9.31.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/Baidu_MobAds_SDK-release_v9.31.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/GDTSDK.unionNormal.4.531.1401.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/GDTSDK.unionNormal.4.531.1401.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/beizi_ad_sdk_3.4.20.34.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/beizi_ad_sdk_3.4.20.34.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/beizi_fusion_sdk_4.90.2.52.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/beizi_fusion_sdk_4.90.2.52.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/kssdk-ad-3.3.47-publishRelease-c5859164a8.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/libs/open_ad_sdk_5.3.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/open_ad_sdk_5.3.5.1.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/src/androidTest/java/com/tzh/firebaselib/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaselib/src/test/java/com/tzh/firebaselib/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[IFB6EIBEAEDMBAHE]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3ee7e779]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -136,7 +131,7 @@
       <recent name="com.tzh.ad.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AdLib:baselibrary [assemble]">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="AdLib.app.main" />
       <option name="DEPLOY" value="true" />
