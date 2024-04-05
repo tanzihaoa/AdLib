@@ -71,7 +71,7 @@ object GDTAdUtil {
             override fun onADLoaded(p0: Long) {
                 Log.e("=======GDT","onADLoaded")
             }
-        }, 1500)
+        })
         splashAD.showAd(view)
     }
 
