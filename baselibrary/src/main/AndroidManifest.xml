@@ -9,8 +9,7 @@
 
     <!--获取手机状态的权限可能涉及到获取个人信息，由渠道引入，媒体可以通过以下配置，主动移除这个权限-->
     <uses-permission
-        android:name="android.permission.READ_PHONE_STATE"
-        tools:node="remove" />
+        android:name="android.permission.READ_PHONE_STATE"/>
 
     <!--必要权限-->
     <!--⽹络访问权限-->

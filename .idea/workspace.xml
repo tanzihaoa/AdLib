@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 增加初始化方法">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/activity/LaunchActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_launch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/GDTAdUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +66,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
         <option value="Version Catalog File.versions" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -86,22 +94,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/StudioProjects/AdLib/app&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/Administrator/StudioProjects/AdLib/app/src/main/res/layout"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\StudioProjects\AdLib\app\src\main\res\layout" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\app" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\firebaselib\libs" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\local_repo\Baidu_MobAds_SDK-release_v9.31" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
-      <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\src\main\res\xml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\libs" />
@@ -109,6 +117,7 @@
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.tzh.addemo.activity" />
       <recent name="com.tzh.ad.util" />
     </key>
   </component>
@@ -314,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711607196431</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="代码提交 增加初始化方法">
+      <created>1711620460709</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711620460709</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

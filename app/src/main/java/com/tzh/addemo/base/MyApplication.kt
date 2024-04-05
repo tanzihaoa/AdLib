@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import com.tzh.ad.util.AdUtil
+import com.tzh.ad.util.GDTAdUtil
 
 class MyApplication : Application() {
 
@@ -16,7 +17,8 @@ class MyApplication : Application() {
         super.onCreate()
         mContext = this
         //广告初始化
-        AdUtil.init(this,"5466461")
+//        AdUtil.init(this,"5466461")
+        GDTAdUtil.init(this,"1206882932")
     }
 
     /**
