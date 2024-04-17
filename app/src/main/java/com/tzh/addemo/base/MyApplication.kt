@@ -18,7 +18,7 @@ class MyApplication : Application() {
         mContext = this
         //广告初始化
 //        AdUtil.init(this,"5466461")
-        GDTAdUtil.init(this,"1206882932")
+        GDTAdUtil.init(this,"1206884666")
     }
 
     /**

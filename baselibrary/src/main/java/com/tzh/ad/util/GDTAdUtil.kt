@@ -14,16 +14,17 @@ import com.qq.e.comm.util.AdError
  */
 object GDTAdUtil {
     //广告初始化
-    fun init(context: Context, appId : String){
+    fun init(context: Context, appId : String,listener: AdUtil.InitListener?= null){
         GDTAdSdk.initWithoutStart(context,appId)
         GDTAdSdk.start(object : GDTAdSdk.OnStartListener{
             override fun onStartSuccess() {
                 Log.e("=======GDT","广告初始化成功")
-
+                listener?.success()
             }
 
             override fun onStartFailed(e : Exception?) {
                 Log.e("=======GDT","广告初始化成功错误====${e?.message}")
+                listener?.fail()
             }
         })
     }

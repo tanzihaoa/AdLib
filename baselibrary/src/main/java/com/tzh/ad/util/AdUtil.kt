@@ -18,7 +18,7 @@ import com.bytedance.sdk.openadsdk.mediation.ad.MediationSplashRequestInfo
 
 object AdUtil {
 
-    fun init(context: Context,appId : String){
+    fun init(context: Context,appId : String,listener: InitListener ?= null){
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
@@ -28,10 +28,12 @@ object AdUtil {
         )
         TTAdSdk.start(object : TTAdSdk.Callback{
             override fun success() {
+                listener?.success()
                 Log.e("=======","广告初始化成功")
             }
 
             override fun fail(code: Int, msg: String?) {
+                listener?.fail()
                 Log.e("=======","广告初始化成功错误===${code}====${msg}")
             }
         })
@@ -131,5 +133,14 @@ object AdUtil {
         fun onAdTick(millisUnitFinished : Long)
 
         fun onError(csJAdError: CSJAdError?)
+    }
+
+    /**
+     * 初始化监听
+     */
+    interface InitListener{
+        fun success()
+
+        fun fail()
     }
 }

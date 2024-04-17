@@ -50,7 +50,7 @@ open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.acti
             add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
         },object : OnPermissionCallBackListener {
             override fun onAgree() {
-                GDTAdUtil.showSpreadAd("8009229405848119",binding.frameLayout,object : GDTAdUtil.GDTAdListener{
+                GDTAdUtil.showSpreadAd("4029526733916550",binding.frameLayout,object : GDTAdUtil.GDTAdListener{
                     override fun loaded() {
 
                     }
