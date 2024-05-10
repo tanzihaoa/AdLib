@@ -2,7 +2,9 @@ package com.tzh.addemo.activity
 
 import android.annotation.SuppressLint
 import android.view.KeyEvent
+import com.bytedance.sdk.openadsdk.CSJAdError
 import com.qq.e.comm.util.AdError
+import com.tzh.ad.util.AdUtil
 import com.tzh.ad.util.GDTAdUtil
 import com.tzh.addemo.MainActivity
 import com.tzh.addemo.R
@@ -45,32 +47,21 @@ open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.acti
      */
     private var canJumpImmediately = false
     private fun loadAd(){
-        PermissionXUtil.requestAnyPermission(this, mutableListOf<String>().apply {
-            add(android.Manifest.permission.READ_PHONE_STATE)
-            add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        },object : OnPermissionCallBackListener {
-            override fun onAgree() {
-                GDTAdUtil.showSpreadAd("4029526733916550",binding.frameLayout,object : GDTAdUtil.GDTAdListener{
-                    override fun loaded() {
+        AdUtil.showSpreadAd("889186480","5529380","",binding.frameLayout,object : AdUtil.MyAdListener{
+            override fun loaded() {
 
-                    }
-
-                    override fun close() {
-                        toHome()
-                    }
-
-                    override fun onAdTick(millisUnitFinished: Long) {
-
-                    }
-
-                    override fun onError(error : AdError?) {
-                        toHome()
-                    }
-                })
             }
 
-            override fun onDisAgree() {
+            override fun close() {
+                toHome()
+            }
 
+            override fun onAdTick(millisUnitFinished: Long) {
+
+            }
+
+            override fun onError(csJAdError: CSJAdError?) {
+                toHome()
             }
         })
     }

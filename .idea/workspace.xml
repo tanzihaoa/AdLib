@@ -13,15 +13,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/activity/LaunchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/activity/LaunchActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/GDTAdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/GDTAdUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Administrator\.android\avd\Television_1080p_API_30.ini]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[d98242e2]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -339,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712311748704</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="代码提交 增加初始化方法">
+      <created>1713340707495</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713340707495</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

@@ -9,21 +9,23 @@ import com.bytedance.sdk.openadsdk.AdSlot
 import com.bytedance.sdk.openadsdk.CSJAdError
 import com.bytedance.sdk.openadsdk.CSJSplashAd
 import com.bytedance.sdk.openadsdk.TTAdConfig
+import com.bytedance.sdk.openadsdk.TTAdConstant
 import com.bytedance.sdk.openadsdk.TTAdNative.CSJSplashAdListener
 import com.bytedance.sdk.openadsdk.TTAdSdk
-import com.bytedance.sdk.openadsdk.mediation.MediationConstant
-import com.bytedance.sdk.openadsdk.mediation.ad.MediationAdSlot
-import com.bytedance.sdk.openadsdk.mediation.ad.MediationSplashRequestInfo
+import com.bytedance.sdk.openadsdk.TTCustomController
 
 
 object AdUtil {
 
-    fun init(context: Context,appId : String,listener: InitListener ?= null){
+    fun init(context: Context,appId : String,listener: InitListener ?= null,controller: TTCustomController ?= null){
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
-            .useMediation(true)//开启聚合功能，默认false
             .supportMultiProcess(true)
+            .allowShowNotify(true) //是否允许sdk展示通知栏提示,若设置为false则会导致通知栏不显示下载进度
+            .directDownloadNetworkType(TTAdConstant.NETWORK_STATE_WIFI)
+            .supportMultiProcess(true)
+            .customController(controller)
             .build()
         )
         TTAdSdk.start(object : TTAdSdk.Callback{
@@ -47,22 +49,12 @@ object AdUtil {
             listener.close()
             return
         }
-        val csjSplashRequestInfo : MediationSplashRequestInfo = object : MediationSplashRequestInfo(
-            MediationConstant.ADN_PANGLE, // 穿山甲
-            splashId, // adn开屏广告代码位Id，注意不是聚合广告位Id
-            appId,   // adn应用id，注意要跟初始化传入的保持一致
-            appKey  // adn没有appKey时，传入空即可)
-        ){}
 
         //第二步、创建AdSlot
         val adSlot = AdSlot.Builder()
             .setCodeId(splashId)
             .setImageAcceptedSize(view.width, view.height)
-            .setMediationAdSlot(
-                MediationAdSlot.Builder() //将自定义兜底对象设置给AdSlot
-                    .setMediationSplashRequestInfo(csjSplashRequestInfo)
-                    .build()
-            )
+
             .build()
 
         // 第三步，请求广告
