@@ -22,3 +22,9 @@ object Util {
         return (pxValue / scale + 0.5f).toInt()
     }
 }
+
+
+/**
+ * 对某个对象 做非null处理
+ */
+fun <T> T?.toDefault(default: T): T = this ?: default

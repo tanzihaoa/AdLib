@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="16dp"
-                android:text="开屏广告"
+                android:text="激励视频"
                 app:shapeCorners="20dp"
                 app:shapeGradientAngle="BL_TR"
                 android:gravity="center"

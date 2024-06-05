@@ -2,6 +2,8 @@ package com.tzh.addemo
 
 import android.content.Context
 import android.content.Intent
+import com.luck.picture.lib.utils.ToastUtils
+import com.tzh.ad.util.AdUtil
 import com.tzh.addemo.base.AppBaseActivity
 import com.tzh.addemo.databinding.ActivityMainBinding
 
@@ -21,27 +23,27 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     override fun initData() {
-//        AdUtil.showSpreadAd("888827949","5466461","",binding.frameLayout,object : AdUtil.MyAdListener{
-//            override fun loaded() {
-//
-//            }
-//
-//            override fun close() {
-//
-//            }
-//
-//            override fun onAdTick(millisUnitFinished: Long) {
-//
-//            }
-//
-//            override fun onError(csJAdError: CSJAdError?) {
-//
-//            }
-//        })
+
     }
 
     fun toRecycler(){
+        AdUtil.showRewardedVideoAd(this,"958230124",object : AdUtil.MyRewardedAdListener{
+            override fun loaded() {
 
+            }
+
+            override fun close() {
+
+            }
+
+            override fun onRewardArrived() {
+                ToastUtils.showToast(this@MainActivity,"获取奖励成功")
+            }
+
+            override fun onError(s: String) {
+
+            }
+        })
     }
 
     fun toImage(){
