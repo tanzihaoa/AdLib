@@ -2,13 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tzh.ad">
-    <!--获取应用安装列表的权限属于个人信息，由渠道引入，媒体可以通过以下配置，主动移除这个权限-->
-    <uses-permission
-        android:name="android.permission.QUERY_ALL_PACKAGES"
-        tools:node="remove" />
-
-    <!--获取手机状态的权限可能涉及到获取个人信息，由渠道引入，媒体可以通过以下配置，主动移除这个权限-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <!--必要权限-->
     <!--⽹络访问权限-->
@@ -21,14 +14,6 @@
     <!--应⽤安装权限-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-    <!--可选权限-->
-    <!--设备信息：MAC获取权限-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--定位权限-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         >
     </application>
