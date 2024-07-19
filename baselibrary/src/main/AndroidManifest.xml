@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tzh.ad">
 
+    <!--获取应用安装列表的权限属于个人信息，由渠道引入，媒体可以通过以下配置，主动移除这个权限-->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove"/>
+
     <!--必要权限-->
     <!--⽹络访问权限-->
     <uses-permission android:name="android.permission.INTERNET" />

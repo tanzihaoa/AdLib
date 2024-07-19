@@ -15,11 +15,8 @@ import com.bytedance.sdk.openadsdk.TTAdNative
 import com.bytedance.sdk.openadsdk.TTAdNative.CSJSplashAdListener
 import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.bytedance.sdk.openadsdk.TTCustomController
+import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd
-import com.bytedance.sdk.openadsdk.mediation.MediationConstant
-
-
-
 
 
 object AdUtil {
@@ -211,6 +208,40 @@ object AdUtil {
             }
         })
         ttRewardVideoAd.showRewardVideoAd(activity)
+    }
+
+    /**
+     * 显示插屏广告
+     */
+    fun showFullScreenVideoAd(activity : Activity,codeId : String,listener : MyAdListener,isGone : Boolean = false){
+        if(isGone){
+            listener.close()
+            return
+        }
+        val adNativeLoader = TTAdSdk.getAdManager().createAdNative(activity)
+        val adSlot: AdSlot = AdSlot.Builder()
+            .setCodeId(codeId)
+            .setOrientation(TTAdConstant.ORIENTATION_VERTICAL) //设置横竖屏方向
+            .build()
+        adNativeLoader.loadFullScreenVideoAd(adSlot,object : TTAdNative.FullScreenVideoAdListener{
+            override fun onError(code: Int, message: String?) {
+                Log.e("screenAd=======","onError==${code}==${message}")
+            }
+
+            override fun onFullScreenVideoAdLoad(ad: TTFullScreenVideoAd?) {
+                Log.e("screenAd=======","onFullScreenVideoAdLoad")
+            }
+
+            override fun onFullScreenVideoCached() {
+                Log.e("screenAd=======","onFullScreenVideoCached---0")
+
+            }
+
+            override fun onFullScreenVideoCached(ad: TTFullScreenVideoAd?) {
+                Log.e("screenAd=======","onFullScreenVideoCached")
+                ad?.showFullScreenVideoAd(activity)
+            }
+        })
     }
 
     interface MyAdListener{

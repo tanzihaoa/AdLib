@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.Toast
+import com.bytedance.sdk.openadsdk.CSJAdError
 import com.tzh.ad.util.AdUtil
 import com.tzh.ad.util.RewardedVideoAdUtil
 import com.tzh.addemo.base.AppBaseActivity
@@ -44,7 +45,6 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
             start()
         }
 
-        RewardedVideoAdUtil.loadRewardedVideoAd(this,"958230124",listener)
     }
 
     override fun initData() {
@@ -52,7 +52,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     fun toRecycler(){
-        RewardedVideoAdUtil.showRewardedVideoAd(this,"958230124",listener)
+        RewardedVideoAdUtil.showRewardedVideoAd(this,"959168404",listener)
     }
 
     fun toImage(){
@@ -60,7 +60,23 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     fun start(){
+        AdUtil.showFullScreenVideoAd(this,"959316816",object : AdUtil.MyAdListener{
+            override fun loaded() {
 
+            }
+
+            override fun close() {
+
+            }
+
+            override fun onAdTick(millisUnitFinished: Long) {
+
+            }
+
+            override fun onError(csJAdError: CSJAdError?) {
+
+            }
+        })
     }
 
     fun saveVideo(){
