@@ -9,21 +9,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交 激励视频增加提前加载">
+    <list default="true" id="702925bf-373b-4d1e-81d6-7fb00d19f74b" name="Changes" comment="代码提交">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/activity/LaunchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/activity/LaunchActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tzh/addemo/base/MyApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/AdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/show/AdUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/GDTAdUtil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/util/RewardedVideoAdUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/baselibrary/src/main/java/com/tzh/ad/show/RewardedVideoAdUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[2HSYD24328201833]" />
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -108,15 +116,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/迅雷下载/Demo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/迅雷下载/Demo&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\app\src\main\res\layout" />
@@ -129,6 +138,9 @@
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\libs" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\firebaselib" />
       <recent name="C:\Users\Administrator\StudioProjects\AdLib\baselibrary\MyLib" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.tzh.ad.show" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.tzh.addemo.activity" />
@@ -146,6 +158,7 @@
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -221,6 +234,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="AdLib:baselibrary [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -242,6 +256,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="AdLib:baselibrary [releaseSourcesJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -263,6 +278,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -440,11 +456,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="代码提交" />
     <MESSAGE value="代码提交 增加初始化方法" />
     <MESSAGE value="代码提交 初始化增加权限控制" />
     <MESSAGE value="代码提交 去掉非必要权限" />
     <MESSAGE value="代码提交 激励视频增加提前加载" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码提交 激励视频增加提前加载" />
+    <MESSAGE value="代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
   </component>
 </project>

@@ -3,8 +3,7 @@ package com.tzh.addemo.base
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import com.tzh.ad.util.AdUtil
-import com.tzh.ad.util.GDTAdUtil
+import com.tzh.ad.show.AdUtil
 
 class MyApplication : Application() {
 

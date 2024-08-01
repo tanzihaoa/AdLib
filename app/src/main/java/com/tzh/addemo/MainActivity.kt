@@ -5,8 +5,8 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import com.bytedance.sdk.openadsdk.CSJAdError
-import com.tzh.ad.util.AdUtil
-import com.tzh.ad.util.RewardedVideoAdUtil
+import com.tzh.ad.show.AdUtil
+import com.tzh.ad.show.RewardedVideoAdUtil
 import com.tzh.addemo.base.AppBaseActivity
 import com.tzh.addemo.databinding.ActivityMainBinding
 
@@ -60,23 +60,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     fun start(){
-        AdUtil.showFullScreenVideoAd(this,"959316816",object : AdUtil.MyAdListener{
-            override fun loaded() {
-
-            }
-
-            override fun close() {
-
-            }
-
-            override fun onAdTick(millisUnitFinished: Long) {
-
-            }
-
-            override fun onError(csJAdError: CSJAdError?) {
-
-            }
-        })
+        AdUtil.showFullScreenVideoAd(this,"959316816")
     }
 
     fun saveVideo(){

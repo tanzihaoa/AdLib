@@ -49,5 +49,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     //融合基础包，必须引入
     api 'com.pangle.cn:ads-sdk-pro:6.1.0.7'
-    api 'com.qq.e.union:union:4.570.1440'
 }

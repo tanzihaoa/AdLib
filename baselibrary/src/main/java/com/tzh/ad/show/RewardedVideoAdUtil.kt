@@ -1,4 +1,4 @@
-package com.tzh.ad.util
+package com.tzh.ad.show
 
 import android.app.Activity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import com.bytedance.sdk.openadsdk.TTAdConstant
 import com.bytedance.sdk.openadsdk.TTAdNative
 import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd
+import com.tzh.ad.util.toDefault
 
 object RewardedVideoAdUtil {
     var mRewardVideoAd : TTRewardVideoAd ?= null

@@ -1,4 +1,4 @@
-package com.tzh.ad.util
+package com.tzh.ad.show
 
 import android.app.Activity
 import android.content.Context
@@ -17,11 +17,12 @@ import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.bytedance.sdk.openadsdk.TTCustomController
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd
+import com.tzh.ad.util.toDefault
 
 
 object AdUtil {
 
-    fun init(context: Context,appId : String,listener: InitListener ?= null,controller: TTCustomController ?= null){
+    fun init(context: Context, appId : String, listener: InitListener?= null, controller: TTCustomController ?= null){
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
@@ -48,7 +49,7 @@ object AdUtil {
     /**
      * 显示开屏广告
      */
-    fun showSpreadAd(splashId : String,appId : String,appKey : String,view : FrameLayout,listener : MyAdListener,isGone : Boolean = false){
+    fun showSpreadAd(splashId : String,view : FrameLayout, listener : MyAdListener, isGone : Boolean = false){
         if(isGone){
             listener.close()
             return
@@ -116,7 +117,7 @@ object AdUtil {
     /**
      * 显示激励视频
      */
-    fun showRewardedVideoAd(activity : Activity,rewardId : String,listener : MyRewardedAdListener,isGone : Boolean = false){
+    fun showRewardedVideoAd(activity : Activity, rewardId : String, listener : MyRewardedAdListener, isGone : Boolean = false){
         if(isGone){
             listener.close()
             return
@@ -213,9 +214,8 @@ object AdUtil {
     /**
      * 显示插屏广告
      */
-    fun showFullScreenVideoAd(activity : Activity,codeId : String,listener : MyAdListener,isGone : Boolean = false){
+    fun showFullScreenVideoAd(activity : Activity, codeId : String, isGone : Boolean = false){
         if(isGone){
-            listener.close()
             return
         }
         val adNativeLoader = TTAdSdk.getAdManager().createAdNative(activity)

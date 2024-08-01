@@ -3,15 +3,11 @@ package com.tzh.addemo.activity
 import android.annotation.SuppressLint
 import android.view.KeyEvent
 import com.bytedance.sdk.openadsdk.CSJAdError
-import com.qq.e.comm.util.AdError
-import com.tzh.ad.util.AdUtil
-import com.tzh.ad.util.GDTAdUtil
+import com.tzh.ad.show.AdUtil
 import com.tzh.addemo.MainActivity
 import com.tzh.addemo.R
 import com.tzh.addemo.base.AppBaseActivity
 import com.tzh.addemo.databinding.ActivityLaunchBinding
-import com.tzh.mylibrary.util.OnPermissionCallBackListener
-import com.tzh.mylibrary.util.PermissionXUtil
 
 @SuppressLint("CustomSplashScreen")
 open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.activity_launch) {
@@ -47,7 +43,7 @@ open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.acti
      */
     private var canJumpImmediately = false
     private fun loadAd(){
-        AdUtil.showSpreadAd("889551332","5571608","",binding.frameLayout,object : AdUtil.MyAdListener{
+        AdUtil.showSpreadAd("889551332",binding.frameLayout,object : AdUtil.MyAdListener{
             override fun loaded() {
 
             }
