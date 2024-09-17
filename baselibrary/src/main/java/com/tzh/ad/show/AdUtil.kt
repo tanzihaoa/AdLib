@@ -17,6 +17,9 @@ import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.bytedance.sdk.openadsdk.TTCustomController
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd
+import com.bytedance.sdk.openadsdk.mediation.MediationConstant
+import com.bytedance.sdk.openadsdk.mediation.ad.MediationAdSlot
+import com.bytedance.sdk.openadsdk.mediation.ad.MediationSplashRequestInfo
 import com.tzh.ad.util.toDefault
 
 
@@ -60,6 +63,81 @@ object AdUtil {
             .setCodeId(splashId)
             .setImageAcceptedSize(view.width, view.height)
 
+            .build()
+
+        // 第三步，请求广告
+        val adNativeLoader = TTAdSdk.getAdManager().createAdNative(view.context)
+
+
+        val mCSJSplashInteractionListener = object : CSJSplashAd.SplashAdListener{
+            override fun onSplashAdShow(csJSplashAd: CSJSplashAd?) {
+
+            }
+
+            override fun onSplashAdClick(csJSplashAd: CSJSplashAd?) {
+
+            }
+
+            override fun onSplashAdClose(csJSplashAd: CSJSplashAd?, i: Int) {
+                Log.e("=======","广告关闭")
+                listener.close()
+            }
+        }
+
+        adNativeLoader.loadSplashAd(adSlot, object : CSJSplashAdListener{
+            override fun onSplashLoadSuccess(csjSplashAd: CSJSplashAd?) {
+
+            }
+
+            override fun onSplashLoadFail(csjAdError : CSJAdError?) {
+                Log.e("=======","广告加载失败===${csjAdError?.msg}====${csjAdError?.code}")
+                listener.onError(csjAdError)
+            }
+
+            override fun onSplashRenderSuccess(csJSplashAd: CSJSplashAd?) {
+                Log.e("=======","广告加载成功")
+                listener.loaded()
+                csJSplashAd?.setSplashAdListener(mCSJSplashInteractionListener)
+                val splashView: View? = csJSplashAd?.splashView
+                view.removeAllViews()
+                view.addView(splashView)
+            }
+
+            override fun onSplashRenderFail(csJSplashAd: CSJSplashAd?, csJAdError: CSJAdError?) {
+                Log.e("=======","广告加载失败===${csJAdError?.msg}====${csJAdError?.code}")
+                listener.onError(csJAdError)
+            }
+        }, 3500)
+    }
+
+    /**
+     * 显示开屏广告
+     * @param appId AppId
+     * @param splashId 开屏代码为
+     * @param ddId 兜底代码
+     */
+    fun showSpreadAd(appId :String,splashId : String,ddId : String,view : FrameLayout, listener : MyAdListener, isGone : Boolean = false){
+        if(isGone){
+            listener.close()
+            return
+        }
+        //第一步、创建开屏自定义兜底对象
+        val csjSplashRequestInfo: MediationSplashRequestInfo = object : MediationSplashRequestInfo(
+            MediationConstant.ADN_PANGLE,  // 穿山甲
+            ddId,  // adn开屏广告代码位Id，注意不是聚合广告位Id
+            appId,  // adn应用id，注意要跟初始化传入的保持一致
+            "" // adn没有appKey时，传入空即可
+        ) {}
+
+        //第二步、创建AdSlot
+        val adSlot = AdSlot.Builder()
+            .setCodeId(splashId)
+            .setImageAcceptedSize(view.width, view.height)
+            .setMediationAdSlot(
+                MediationAdSlot.Builder()
+                    //将自定义兜底对象设置给AdSlot
+                    .setMediationSplashRequestInfo(csjSplashRequestInfo)
+                    .build())
             .build()
 
         // 第三步，请求广告

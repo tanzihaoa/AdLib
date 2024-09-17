@@ -43,7 +43,7 @@ open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.acti
      */
     private var canJumpImmediately = false
     private fun loadAd(){
-        AdUtil.showSpreadAd("889551332",binding.frameLayout,object : AdUtil.MyAdListener{
+        AdUtil.showSpreadAd("889909675",binding.frameLayout,object : AdUtil.MyAdListener{
             override fun loaded() {
 
             }
