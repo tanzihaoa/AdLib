@@ -29,10 +29,10 @@ object AdUtil {
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
-            .supportMultiProcess(true)
             .allowShowNotify(true) //是否允许sdk展示通知栏提示,若设置为false则会导致通知栏不显示下载进度
             .directDownloadNetworkType(TTAdConstant.NETWORK_STATE_WIFI)
-            .supportMultiProcess(true)
+            .supportMultiProcess(true)//开启多进程
+            .useMediation(true)//开启聚合功能，默认false
             .customController(controller)
             .build()
         )
