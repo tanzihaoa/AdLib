@@ -25,14 +25,17 @@ import com.tzh.ad.util.toDefault
 
 object AdUtil {
 
-    fun init(context: Context, appId : String, listener: InitListener?= null, controller: TTCustomController ?= null){
+    /**
+     * @param useMediation 是否开启聚合功能
+     */
+    fun init(context: Context, appId : String, listener: InitListener?= null,useMediation : Boolean = true, controller: TTCustomController ?= null){
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
             .allowShowNotify(true) //是否允许sdk展示通知栏提示,若设置为false则会导致通知栏不显示下载进度
             .directDownloadNetworkType(TTAdConstant.NETWORK_STATE_WIFI)
             .supportMultiProcess(true)//开启多进程
-            .useMediation(true)//开启聚合功能，默认false
+            .useMediation(useMediation)//开启聚合功能，默认false
             .customController(controller)
             .build()
         )
