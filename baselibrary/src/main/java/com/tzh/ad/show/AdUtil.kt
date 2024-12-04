@@ -236,6 +236,8 @@ object AdUtil {
     }
 
     private fun showRewarded(activity : Activity,ttRewardVideoAd: TTRewardVideoAd,listener : MyRewardedAdListener){
+        //是否获取到奖励
+        var mIsRewardValid = false
         ttRewardVideoAd.setRewardAdInteractionListener(object : TTRewardVideoAd.RewardAdInteractionListener{
             override fun onAdShow() {
                 Log.e("Video=======","onAdShow")
@@ -252,7 +254,12 @@ object AdUtil {
             override fun onAdClose() {
                 Log.e("Video=======","onAdClose")
                 //广告关闭的回调
-
+                if(mIsRewardValid){
+                    //获取到了奖励
+                    listener.onRewardArrived()
+                }else{
+                    listener.close()
+                }
             }
 
             override fun onVideoComplete() {
@@ -277,12 +284,7 @@ object AdUtil {
                 //isRewardValid ：是否发放奖励，true：发奖励；false：不发奖励
                 //rewardType：奖励类型，0:基础奖励 >0:进阶奖励
                 //extraInfo：奖励的额外参数
-                if(isRewardValid){
-                    //获取到了奖励
-                    listener.onRewardArrived()
-                }else{
-                    listener.close()
-                }
+                mIsRewardValid = isRewardValid
             }
 
             override fun onSkippedVideo() {
