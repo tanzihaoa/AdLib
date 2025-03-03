@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.Toast
-import com.bytedance.sdk.openadsdk.CSJAdError
 import com.tzh.ad.show.AdUtil
 import com.tzh.ad.show.RewardedVideoAdUtil
 import com.tzh.addemo.base.AppBaseActivity

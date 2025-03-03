@@ -99,6 +99,6 @@ dependencies {
     api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
     api 'androidx.multidex:multidex:2.0.1'
 
-    api 'com.github.tanzihaoa:ModelLib:v1.2.4'
+    api 'com.github.tanzihaoa:BaseLib:v1.0.3'
     implementation project(':baselibrary')
 }

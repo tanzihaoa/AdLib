@@ -17,10 +17,10 @@
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:background="@color/color_fff">
-            <com.tzh.mylibrary.view.XAppTitleView
+            <com.tzh.baselib.view.title.XAppTitleView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <com.tzh.mylibrary.shapeview.ShapeTextView
+            <com.tzh.baselib.shapeview.ShapeTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="16dp"
@@ -37,13 +37,13 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.tzh.mylibrary.shapeview.ShapeConstraintLayout
+            <com.tzh.baselib.shapeview.ShapeConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="16dp"
                 app:shapeBackgroundColor="@color/color_00f3b8"
                 app:shapeCorners="8dp">
-                <com.tzh.mylibrary.view.ImageTextView
+                <com.tzh.baselib.view.ImageTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:itvText="to"
@@ -56,9 +56,9 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
-            </com.tzh.mylibrary.shapeview.ShapeConstraintLayout>
+            </com.tzh.baselib.shapeview.ShapeConstraintLayout>
 
-            <com.tzh.mylibrary.shapeview.ShapeTextView
+            <com.tzh.baselib.shapeview.ShapeTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="16dp"
@@ -74,7 +74,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.tzh.mylibrary.shapeview.ShapeTextView
+            <com.tzh.baselib.shapeview.ShapeTextView
                 android:id="@+id/tv_wallpaper"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -90,7 +90,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.tzh.mylibrary.shapeview.ShapeTextView
+            <com.tzh.baselib.shapeview.ShapeTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="16dp"
