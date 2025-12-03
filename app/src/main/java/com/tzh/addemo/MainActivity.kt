@@ -51,7 +51,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     fun toRecycler(){
-        RewardedVideoAdUtil.showRewardedVideoAd(this,"959168404",listener)
+        RewardedVideoAdUtil.showRewardedVideoAd(this,"961364448",listener)
     }
 
     fun toImage(){
@@ -59,7 +59,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>(R.layout.activity_main
     }
 
     fun start(){
-        AdUtil.showFullScreenVideoAd(this,"959316816")
+        AdUtil.showFullScreenVideoAd(this,"961364447")
     }
 
     fun saveVideo(){

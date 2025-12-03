@@ -5,11 +5,13 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
+        namespace "com.tzh.addemo"
         applicationId "com.tzh.addemo"
-        minSdk 23
+        minSdk 24
+        targetSdk 35
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -99,6 +101,6 @@ dependencies {
     api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
     api 'androidx.multidex:multidex:2.0.1'
 
-    api 'com.github.tanzihaoa:BaseLib:v1.0.3'
+    api 'com.github.tanzihaoa:BaseLib:v1.1.4'
     implementation project(':baselibrary')
 }
