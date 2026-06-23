@@ -28,7 +28,7 @@ object AdUtil {
     /**
      * @param useMediation 是否开启聚合功能
      */
-    fun init(context: Context, appId : String, listener: InitListener?= null,useMediation : Boolean = true, controller: TTCustomController ?= null){
+    fun init(context: Context, appId : String, listener: InitListener?= null,useMediation : Boolean = true){
         //广告初始化
         TTAdSdk.init(context,TTAdConfig.Builder()
             .appId(appId)
@@ -36,7 +36,6 @@ object AdUtil {
             .directDownloadNetworkType(TTAdConstant.NETWORK_STATE_WIFI)
             .supportMultiProcess(true)//开启多进程
             .useMediation(useMediation)//开启聚合功能，默认false
-            .customController(controller)
             .build()
         )
         TTAdSdk.start(object : TTAdSdk.Callback{
@@ -94,7 +93,7 @@ object AdUtil {
 
             override fun onSplashLoadFail(csjAdError : CSJAdError?) {
                 Log.e("=======","广告加载失败===${csjAdError?.msg}====${csjAdError?.code}")
-                listener.onError(csjAdError)
+                listener.onError()
             }
 
             override fun onSplashRenderSuccess(csJSplashAd: CSJSplashAd?) {
@@ -108,7 +107,7 @@ object AdUtil {
 
             override fun onSplashRenderFail(csJSplashAd: CSJSplashAd?, csJAdError: CSJAdError?) {
                 Log.e("=======","广告加载失败===${csJAdError?.msg}====${csJAdError?.code}")
-                listener.onError(csJAdError)
+                listener.onError()
             }
         }, 3500)
     }
@@ -169,7 +168,7 @@ object AdUtil {
 
             override fun onSplashLoadFail(csjAdError : CSJAdError?) {
                 Log.e("=======","广告加载失败===${csjAdError?.msg}====${csjAdError?.code}")
-                listener.onError(csjAdError)
+                listener.onError()
             }
 
             override fun onSplashRenderSuccess(csJSplashAd: CSJSplashAd?) {
@@ -183,7 +182,7 @@ object AdUtil {
 
             override fun onSplashRenderFail(csJSplashAd: CSJSplashAd?, csJAdError: CSJAdError?) {
                 Log.e("=======","广告加载失败===${csJAdError?.msg}====${csJAdError?.code}")
-                listener.onError(csJAdError)
+                listener.onError()
             }
         }, 3500)
     }
@@ -334,7 +333,7 @@ object AdUtil {
 
         fun onAdTick(millisUnitFinished : Long)
 
-        fun onError(csJAdError: CSJAdError?)
+        fun onError()
     }
 
     interface MyRewardedAdListener{

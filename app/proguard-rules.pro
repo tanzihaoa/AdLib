@@ -77,7 +77,120 @@
 -keep class **.**.**Dto {*;}
 -keep class **.**.**DTO {*;}
 
+-keep class com.luck.picture.lib.** { *; }
 
+#如果引入了Camerax库请添加混淆
+-keep class com.luck.lib.camerax.** { *; }
+
+#如果引入了Ucrop库请添加混淆
+-dontwarn com.yalantis.ucrop**
+-keep class com.yalantis.ucrop** { *; }
+-keep interface com.yalantis.ucrop** { *; }
+
+
+# Retrofit + RxJava 规则
+-keep class retrofit2.** { *; }
+-keepclasseswithmembers class * {
+    @retrofit2.http.* <methods>;
+}
+-keep class io.reactivex.** { *; }
+-dontwarn io.reactivex.**
+
+#greendao
+-keepclassmembers class * extends org.greenrobot.greendao.AbstractDao {
+public static java.lang.String TABLENAME;
+}
+-keep class **$Properties { *; }
+
+# If you DO use SQLCipher:
+-keep class org.greenrobot.greendao.database.SqlCipherEncryptedHelper { *; }
+
+# If you do NOT use SQLCipher:
+-dontwarn net.sqlcipher.database.**
+# If you do NOT use RxJava:
+-dontwarn rx.**
+
+#时间选择器混淆
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context);
+}
+-keep class com.tzh.money.MonthView {
+    public <init>(android.content.Context);
+}
+-keep class com.tzh.money.WeekBar {
+    public <init>(android.content.Context);
+}
+-keep class com.tzh.money.WeekView {
+    public <init>(android.content.Context);
+}
+-keep class com.tzh.money.YearView {
+    public <init>(android.content.Context);
+}
+
+#友盟 --
+-keep class com.umeng.** {*;}
+
+-keep class org.repackage.** {*;}
+
+-keep class com.uyumao.** { *; }
+
+-keepclassmembers class * {
+   public <init> (org.json.JSONObject);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+# -- 友盟
+
+#-- 极光
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+-keep class * extends cn.jpush.android.service.JPushMessageService { *; }
+
+-dontwarn cn.jiguang.**
+-keep class cn.jiguang.** { *; }
+-dontwarn com.xiaomi.push.**
+-keep class com.xiaomi.push.** { *; }
+-ignorewarnings
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.hianalytics.android.**{*;}
+-keep class com.huawei.updatesdk.**{*;}
+-keep class com.huawei.hms.**{*;}
+-dontwarn com.vivo.push.**
+-keep class com.vivo.push.**{*; }
+-keep class com.vivo.vms.**{*; }
+-dontwarn com.coloros.mcsdk.**
+-keep class com.coloros.mcsdk.** { *; }
+
+-dontwarn com.heytap.**
+-keep class com.heytap.** { *; }
+
+-dontwarn com.mcs.**
+-keep class com.mcs.** { *; }
+# -- 极光
+
+# -- bugly
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+# -- bugly
+
+-keep class com.bea.xml.stream.** { *;}
+-keep class com.wutka.dtd.** { *;}
+-keep class org.** { *;}
+-keep class aavax.xml.** { *;}
+-keep class com.microsoft.schemas.office.x2006.** { *; }
+-keep class schemaorg_apache_xmlbeans.** { *; }
+-keep class schemasMicrosoftComOfficeExcel.** { *; }
+-keep class schemasMicrosoftComOfficeOffice.** { *; }
+-keep class schemasMicrosoftComVml.** { *; }
+-keep class repackage.** { *; }
+-keep class schemaorg_apache_xmlbeans.** { *; }
 
 # 穿山甲广告渠道混淆
 -keepclassmembers class * {
@@ -128,6 +241,3 @@
     public *;
     protected <fields>;
 }
-
-
-

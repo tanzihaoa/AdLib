@@ -2,7 +2,6 @@ package com.tzh.addemo.activity
 
 import android.annotation.SuppressLint
 import android.view.KeyEvent
-import com.bytedance.sdk.openadsdk.CSJAdError
 import com.tzh.ad.show.AdUtil
 import com.tzh.addemo.MainActivity
 import com.tzh.addemo.R
@@ -56,8 +55,8 @@ open class LaunchActivity : AppBaseActivity<ActivityLaunchBinding>(R.layout.acti
 
             }
 
-            override fun onError(csJAdError: CSJAdError?) {
-                toHome()
+            override fun onError() {
+
             }
         })
     }
